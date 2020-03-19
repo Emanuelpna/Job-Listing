@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  background: var(--bgColor);
+}
+
+:root {
+  --primaryColor: hsl(180, 29%, 50%);
+  --bgColor: hsl(180, 52%, 96%);
+  --filterColor: hsl(180, 31%, 95%);
+  --darkColor: hsl(180, 8%, 52%);
+  --darkerColor: hsl(180, 14%, 20%);
+  --darkestColor: hsl(180, 5%, 12%);
+
+  --idleShadow: 0 4px 12px hsla(180, 29%, 50%, 0.34);
+  --activeShadow: 0 6px 18px hsla(180, 29%, 50%, 0.41);
+
+  --transition: all 150ms cubic-bezier(0.35, 0.47, 0.58, 1);
+}
+
+header {
+  width: 100%;
+  display: block;
+  background: var(--primaryColor);
+  height: 150px;
+  overflow: hidden;
+}
+
+header svg {
+  width: 100%;
+}
+
+main {
+  max-width: 1300px;
+  margin: auto;
+  padding: 24px;
+}
+
+.job {
+  background: #fff;
+  border-left: 7px solid #fff;
+  border-radius: 7px;
+  margin-top: 24px;
+  padding: 24px 32px;
+  box-shadow: var(--idleShadow);
+  transition: var(--transition);
+}
+
+.job:hover {
+  border-color: var(--primaryColor);
+  box-shadow: var(--activeShadow);
+  cursor: pointer;
+}
+
+.job:hover .jobRole {
+  color: var(--primaryColor);
+}
+
+.jobContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.jobCompany {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+
+.jobTitle {
+  flex: 1;
+  margin: 0 32px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.jobCompany {
+  padding-top: 4px;
+}
+
+.jobBadge,
+.jobCompany {
+  width: auto;
+  margin-right: 12px;
+}
+
+.jobBadge {
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 40px;
+  padding: 4px 8px;
+  padding-top: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08rem;
+  color: #fff;
+}
+
+.jobBadge.new {
+  background: var(--primaryColor);
+}
+
+.jobBadge.pin {
+  background: var(--darkestColor);
+}
+
+.jobRole {
+  width: 100%;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  display: block;
+}
+
+.jobDescription {
+  width: 100%;
+  color: hsl(180, 6%, 47%);
+  letter-spacing: 0.03rem;
+}
+
+.jobInfos {
+  flex: 1;
+  padding-right: 4%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.jobInfo {
+  border-radius: 4px;
+}
+.jobInfo,
+.filterName {
+  background: #eff9fb;
+  color: var(--primaryColor);
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  padding-top: 8px;
+}
+
+.filters {
+  max-width: 1300px;
+  margin: auto;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: var(--activeShadow);
+  padding: 24px 32px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translate3d(0, -70%, 0);
+  transition: var(--transition);
+}
+
+.filters.active {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+  transition: var(--transition);
+}
+
+.filterList {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.filter {
+  margin-left: 14px;
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 30px;
+}
+
+.filterName {
+  border-radius: none;
+}
+
+.filterClear {
+  background: var(--primaryColor);
+  width: 100%;
+  height: 100%;
+  padding: 16px 10px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filterClear:hover {
+  background: var(--darkerColor);
+}
+
+.clearAllFilters {
+  color: var(--primaryColor);
+  background: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.clearAllFilters:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Job Listings</title>
+
+    <link rel="stylesheet" href="./style/main.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 32px;
+        color: hsl(180, 5%, 38%);
+      }
+      .attribution a {
+        color: var(--primaryColor);
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 1366 156"
+        width="1366"
+        height="156"
+      >
+        <path
+          fill="#63BABA"
+          fill-rule="evenodd"
+          d="M470.577 563.429c-51.432-51.425-51.438-134.806-.013-186.237l.013-.013L867.235-19.424c51.441-51.434 134.836-51.434 186.276 0 48.811 48.804 51.304 126.392 7.473 178.135l178.158-178.135c51.441-51.434 134.836-51.434 186.277 0 51.431 51.424 51.437 134.805.013 186.237-.005.004-.01.008-.013.013l-396.66 396.603c-51.44 51.433-134.834 51.433-186.275 0-48.812-48.805-51.304-126.394-7.471-178.138L656.853 563.43c-51.441 51.433-134.836 51.433-186.276 0zM342.268 45.605c-51.432-51.425-51.438-134.806-.013-186.237l.013-.013 396.658-396.603c51.441-51.434 134.836-51.434 186.277 0 51.431 51.424 51.437 134.805.013 186.237-.005.004-.01.008-.013.013L528.543 45.605c-51.44 51.433-134.834 51.433-186.275 0zm-444.692 71.824c-51.432-51.424-51.438-134.806-.013-186.237l.013-.013 396.658-396.603c51.441-51.434 134.836-51.434 186.277 0 51.431 51.424 51.437 134.805.013 186.237a80.86 80.86 0 01-.013.013L83.85 117.429c-51.44 51.433-134.834 51.433-186.275 0z"
+        />
+      </svg>
+    </header>
+
+    <div class="filters">
+      <ul class="filterList"></ul>
+      <button class="clearAllFilters">Clear</button>
+    </div>
+    
+    <main>
+      <ul class="jobsList">
+        <!-- Item Start -->
+        <li class="job">
+          <section class="jobContainer">
+            <img src="./images/photosnap.svg" alt="Photosnap Logo" />
+            <div class="jobTitle">
+              <span class="jobCompany">Photosnap</span>
+
+              <span class="jobBadge new">New!</span>
+              <span class="jobBadge pin">Featured</span>
+
+              <strong class="jobRole">
+                Senior Frontend Developer
+              </strong>
+
+              <span class="jobDescription">
+                1d ago • Full Time • USA only
+              </span>
+            </div>
+
+            <div class="jobInfos">
+              <!-- Role -->
+              <span class="jobInfo">Frontend</span>
+              <!-- Level -->
+              <span class="jobInfo">Senior</span>
+              <!-- Languages -->
+              <span class="jobInfo">HTML</span>
+              <span class="jobInfo">CSS</span>
+              <span class="jobInfo">JavaScript</span>
+            </div>
+          </section>
+        </li>
+        <!--s Item End -->
+      </ul>
+
+    </main>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+      • 
+      Coded by <a href="https://emanuelandrade.com.br/"  target="_blank">Emanuel Andrade</a>
+    </footer>
+
+    <script type="module" src="./js/index.mjs"></script>
+  </body>
+</html>

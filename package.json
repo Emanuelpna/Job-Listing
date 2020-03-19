@@ -1,0 +1,11 @@
+{
+  "name": "listagem-estatica-jobs-frontendmentor",
+  "author": {
+    "email": "emanuelpnandrade@gmail.com",
+    "url": "https://emanuelandrade.com.br/",
+    "name": "Emanuel Andrade"
+  },
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT"
+}
